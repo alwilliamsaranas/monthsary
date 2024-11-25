@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuromi Flower</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #2e2c3c; /* Dark purple for Kuromi theme */
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #f5a9b8; /* Pinkish accent */
+            margin-top: 20px;
+            font-size: 1.8rem;
+        }
+
+        p {
+            color: #dcdcdc; /* Light gray */
+            font-size: 1rem;
+            margin: 0 10px;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .flower {
+            position: relative;
+            width: 0;
+            height: 0;
+            animation: grow 3s infinite;
+        }
+
+        .flower::before, .flower::after {
+            content: '';
+            position: absolute;
+            background-color: #a78ad8; /* Lavender purple */
+            border-radius: 50%;
+        }
+
+        .flower::before {
+            width: 60px;
+            height: 60px;
+            top: -30px;
+            left: -30px;
+        }
+
+        .flower::after {
+            width: 30px;
+            height: 30px;
+            top: -45px;
+            left: -15px;
+        }
+
+        @keyframes grow {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .message {
+            position: absolute;
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            width: 90%;
+            box-sizing: border-box;
+        }
+
+        .picture {
+            margin-top: 20px;
+        }
+
+        .picture img {
+            width: 120px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid #f5a9b8; /* Pink border */
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .flower::before {
+                width: 50px;
+                height: 50px;
+                top: -25px;
+                left: -25px;
+            }
+
+            .flower::after {
+                width: 25px;
+                height: 25px;
+                top: -37.5px;
+                left: -12.5px;
+            }
+
+            .message {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+
+            .picture img {
+                width: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+
+            .flower::before {
+                width: 40px;
+                height: 40px;
+                top: -20px;
+                left: -20px;
+            }
+
+            .flower::after {
+                width: 20px;
+                height: 20px;
+                top: -30px;
+                left: -10px;
+            }
+
+            .message {
+                padding: 8px;
+            }
+
+            .picture img {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flower"></div>
+        <div class="message">
+            <h1>To My Love</h1>
+            <p>You make my world brighter and more colorful, just like this flower. Love you forever!</p>
+        </div>
+    </div>
+
+    <div class="picture">
+        <img src="love.jpeg" alt="Your Picture Together">
+    </div>
+</body>
+</html>
